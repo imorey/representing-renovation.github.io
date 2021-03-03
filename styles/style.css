@@ -12,11 +12,27 @@ body {
     font-style: italic;
 }
 
-.featureImage {
+.siteplan {
     height: 90%;
     position: absolute;
     right: 10px;
     top: 0px;
+}
+
+.sectioncut {
+    width: 40%;
+    position: absolute;
+    right: 10px;
+    top: 200px;
+}
+
+
+#siteplan-click:hover, #sectioncut-click:hover {
+    text-decoration: underline;
+}
+
+.active {
+    text-decoration: underline;
 }
 
 ul {

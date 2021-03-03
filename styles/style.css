@@ -3,7 +3,18 @@ body {
 }
 
 #header {
-    font-size: 70px;
+    font-size: 25px;
     font-weight: 600;
-    color: blue;
+}
+#subheader {
+    font-size: 15px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.featureImage {
+    height: 90%;
+    position: absolute;
+    right: 10px;
+    top: 0px;
 }

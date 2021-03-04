@@ -39,3 +39,16 @@ ul {
     list-style: none;
     padding-left: 0;
 }
+
+p {
+    display: none;
+}
+
+.timeline-wrapper {
+    width: 100%;
+    position: fixed;
+    bottom: 30px;
+    text-align: center; 
+    justify-content: space-evenly;
+    display: flex;
+}

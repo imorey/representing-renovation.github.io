@@ -1,6 +1,9 @@
 $(document).ready(function($){
 
-//var mydata = JSON.parse('context-data')
+ var contentText = {
+        siteplanData: "test",
+        sectioncutData: "other test"
+    }
 
 $("#siteplan-click").click(function(){
     $('#change-image').attr('src', 'images/Site_Plan_20210302.png');
@@ -21,6 +24,7 @@ $(".select-diagram").click(function(){
 
 $(".more-info").click(function(){
     $(this).siblings("p").toggle();
+    $(this).siblings("p").text(contentText.sectioncutData);
 });
 
 

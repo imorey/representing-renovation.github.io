@@ -47,41 +47,79 @@
 		<div>
 			<ul>
 				<li>
-					<span class="more-info">New</span>
-					<p>Testing Testing</p>
+					<span class="more-info" id="new-info">New</span>
+					<p></p>
 				</li>
-
-				<li>Original</li>
-				<li>Renovated</li>
+				<li>
+					<span>Original</span>
+					<p></p>
+				</li>
+				<li>
+					<span>Renovated</span>
+					<p></p>
+				</li>
 			</ul>
 			<br>
 			<ul>
-				<li>Glass</li>
-				<li>Steel</li>
-				<li>Slate</li>
+				<li>
+					<span>Brick</span>
+					<p></p>
+				</li>
+				<li>
+					<span class="more-info">Glass</span>
+					<p></p>
+				</li>
+				
+				<li>
+					<span class="more-info">Slate</span>
+					<p></p>
+				</li>
+				<li>
+					<span class="more-info">Steel</span>
+					<p></p>
+				</li>
 			</ul>
 			<br>
 			<ul>
-				<li>Gentrification</li>
-				<li>Materiality</li>
-				<li>Iconography</li>
+				<li>
+					<span>Commodificaiton of Time</span>
+					<p></p>	
+				</li>
+				<li>
+					<span class="more-info">Materiality</span>
+					<p></p>
+				</li>
+				<li>
+					<span class="more-info">Narrative Agency</span>
+					<p></p>
+				</li>
+				<li>
+					<span>Nostalgia</span>
+					<p></p>
+				</li>
 			</ul>
 			<br>
 			<ul>
-				<li>Instagram</li>
-				<li>Twitter</li>
+				<li>
+					<span class="more-info">Instagram</span>
+					<p></p>
+				</li>
+				<li>
+					<span class="more-info">Twitter</span>
+					<p></p>
+				</li>
 			</ul>
 		</div>
 		<div class="timeline-wrapper">
-			<span>1851</span>
-			<span>1860</span>
+			<span class="more-info">1851</span>
+			<span class="more-info">1860</span>
 			<span>1866</span>
 			<span>1871</span>
 			<span>1879</span>
 			<span>1897</span>
 			<span>1912</span>
 			<span>1983</span>
-			<span>1985</span>
+			<span class="more-info">1985</span>
 			<span>1987</span>
 			<span>1991</span>
 			<span>1993</span>
@@ -92,8 +130,56 @@
 			<span>2010</span>
 			<span>2013</span>
 			<span>2016</span>
-			<span>2018</span>
+			<span class="more-info">2018</span>
 		</div>
 	</div>
+	<!-- <svg>
+		<path></path>
+	</svg>
+	<script>
+		
+		// how to make this reactive? right now it is not updating when the screen size is changed
+		// also, should this be in my script.js?
+		var imgRect = document.getElementById('change-image').getBoundingClientRect();
+		//console.log(rect.top, rect.right, rect.bottom, rect.left)
+
+		var startPtX = imgRect.left + .5*(imgRect.right - imgRect.left)
+		var startPtY = imgRect.top + .45*(imgRect.bottom - imgRect.top)
+
+		var newInfoRect = document.getElementById('new-info')
+		console.log(newInfoRect.top, newInfoRect.right, newInfoRect.bottom, newInfoRect.left)
+		var endPtX = newInfoRect.right
+		var endPtY = (newInfoRect.top + newInfoRect.bottom)/2
+		//var endPtX
+		//var endPtY
+
+		var lineGenerator = d3.line()
+			.curve(d3.curveCardinal);
+		
+		var points = [
+			[startPtX, startPtY],
+			[800, 20],
+			[300, 300]
+		];
+		
+		var pathData = lineGenerator(points);
+		
+		d3.select('path')
+			.attr('d', pathData);
+		
+		// Also draw points for reference
+		d3.select('svg')
+			.selectAll('circle')
+			.data(points)
+			.enter()
+			.append('circle')
+			.attr('cx', function(d) {
+				return d[0];
+			})
+			.attr('cy', function(d) {
+				return d[1];
+			})
+			.attr('r', 3);
+	</script> -->
 </body>
 </html>

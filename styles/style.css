@@ -1,4 +1,4 @@
-body {
+html, body {
     font-family: "Cormorant Garamond";
 }
 
@@ -35,6 +35,10 @@ body {
     text-decoration: underline;
 }
 
+.clickable {
+    font-weight: bold;
+}
+
 ul {
     list-style: none;
     padding-left: 0;
@@ -51,4 +55,21 @@ p {
     text-align: center; 
     justify-content: space-evenly;
     display: flex;
+}
+
+svg{
+    position: fixed;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+
+path {
+	fill: none;
+	stroke: #999;
+}
+circle {
+	fill: none;
+	stroke: #aaa;
 }

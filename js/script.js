@@ -1,7 +1,7 @@
 $(document).ready(function($){
 
  var contentText = {
-        siteplanData: "test",
+        siteplanData: {new: "Information about this specific aspect of CDY."},
         sectioncutData: "other test"
     }
 
@@ -24,8 +24,15 @@ $(".select-diagram").click(function(){
 
 $(".more-info").click(function(){
     $(this).siblings("p").toggle();
-    $(this).siblings("p").text(contentText.sectioncutData);
+    //make this respond to more filters
+    $(this).siblings("p").text(contentText.siteplanData.new);
 });
+
+$("#change-image").click(function(){
+    $('.more-info').toggleClass('clickable')
+})
+
+// Testing
 
 
 //$(".roof-detail").click(function(){
